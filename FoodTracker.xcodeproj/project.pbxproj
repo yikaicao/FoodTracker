@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C53E69621E405DC300792A02 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E69611E405DC300792A02 /* RatingControl.swift */; };
+		C53E69651E40746C00792A02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53E69641E40746C00792A02 /* MapKit.framework */; };
 		C56C86221E3FFC9A0050BA34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56C86211E3FFC9A0050BA34 /* Main.storyboard */; };
 		C592BEB71E3FE8FC00BA1516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592BEB61E3FE8FC00BA1516 /* AppDelegate.swift */; };
 		C592BEB91E3FE8FC00BA1516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592BEB81E3FE8FC00BA1516 /* ViewController.swift */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		C53E69611E405DC300792A02 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		C53E69641E40746C00792A02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C53E69661E40747800792A02 /* FoodTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTracker.entitlements; sourceTree = "<group>"; };
 		C56C86211E3FFC9A0050BA34 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C592BEB31E3FE8FC00BA1516 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C592BEB61E3FE8FC00BA1516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53E69651E40746C00792A02 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C53E69631E40746C00792A02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C53E69641E40746C00792A02 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C592BEAA1E3FE8FB00BA1516 = {
 			isa = PBXGroup;
 			children = (
 				C592BEB51E3FE8FC00BA1516 /* FoodTracker */,
 				C592BECA1E3FE8FC00BA1516 /* FoodTrackerTests */,
 				C592BEB41E3FE8FC00BA1516 /* Products */,
+				C53E69631E40746C00792A02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +92,7 @@
 		C592BEB51E3FE8FC00BA1516 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C53E69661E40747800792A02 /* FoodTracker.entitlements */,
 				C592BEB61E3FE8FC00BA1516 /* AppDelegate.swift */,
 				C592BEB81E3FE8FC00BA1516 /* ViewController.swift */,
 				C53E69611E405DC300792A02 /* RatingControl.swift */,
@@ -151,6 +165,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8K5FU97DPU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					C592BEC61E3FE8FC00BA1516 = {
 						CreatedOnToolsVersion = 8.2.1;
